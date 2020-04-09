@@ -1,5 +1,12 @@
 # Spring-Core-Annotations
 
+Dependency used:
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>5.2.5.RELEASE</version>
+	</dependency>
+
 @Configuration
 @Component
 @Bean
