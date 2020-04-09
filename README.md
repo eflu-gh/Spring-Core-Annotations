@@ -5,7 +5,7 @@
 @Bean
 @Value
 
-Application starts with:
+Application starts with App class:
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
