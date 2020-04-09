@@ -23,40 +23,40 @@ In order to get the configuration class, we should work with AnnotationConfigApp
 
 AppConfig class is the configuration class.
 //It is like beans.xml where I can put all my beans. This is used as ApplicationContext container.
-  @Configuration
-  public class AppConfig {
+  	
+	@Configuration
+	public class AppConfig {
+	
+	@Bean
+	 public Person myPerson() {
+	 return new Person();
+	 }
+	 
+	}
 
-    @Bean
-    public Person myPerson() {
-      return new Person();
-    }
+  	@Component // It is used to denote that it is a Bean.
+	public class Person {
+	@Value("Edgar") // Value by default
+	private String name;
+	@Value("Lizarraga") // Value by default
+	private String lastName;
 
-  }
+	public Person(){
+	System.out.println("Person");
+	}
+	public String getName() {
+	return name;
+	}
 
-  @Component // It is used to denote that it is a Bean.
-  public class Person {
+	public void setName(String name) {
+	this.name = name;
+	}
 
-    @Value("Edgar") // Value by default
-    private String name;
-    @Value("Lizarraga") // Value by default
-    private String lastName;
+	public String getLastName() {
+	return lastName;
+	}
 
-    public Person(){
-      System.out.println("Person");
-    }
-    public String getName() {
-      return name;
-    }
-
-    public void setName(String name) {
-      this.name = name;
-    }
-
-    public String getLastName() {
-      return lastName;
-    }
-
-    public void setLastName(String lastName) {
-      this.lastName = lastName;
-    }
-  }
+	public void setLastName(String lastName) {
+	this.lastName = lastName;
+	}
+	}
